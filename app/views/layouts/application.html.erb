@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CopyNote</title>
+    <title>EasyCopy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/bdb2f01ccb.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light border-bottom px-0">
+        <div class="navbar-brand mx-0">
+          EasyCopy
+        </div>
+        <button class="navbar-toggler navbar-toggler--right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-dark"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <% if user_signed_in? %>
+                <%= link_to destroy_user_session_path, method: :delete,class: "text-decoration-none" do %>
+                  <i class="fas fa-door-open text-dark mr-1"></i><span class = "mr-3 text-dark">ログアウト</span>
+                <% end %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
