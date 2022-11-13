@@ -27,6 +27,14 @@
                 <%= link_to destroy_user_session_path, method: :delete,class: "text-decoration-none" do %>
                   <i class="fas fa-door-open text-dark mr-1"></i><span class = "mr-3 text-dark">ログアウト</span>
                 <% end %>
+
+                <%= link_to folders_path,class: "text-decoration-none" do %>
+                  <i class="fas fa-door-open text-dark mr-1"></i><span class = "mr-3 text-dark">フォルダ</span>
+                <% end %>
+
+                <%= link_to new_memo_path,class: "text-decoration-none" do %>
+                  <i class="fas fa-door-open text-dark mr-1"></i><span class = "mr-3 text-dark">新規メモ</span>
+                <% end %>
               <% end %>
             </li>
           </ul>

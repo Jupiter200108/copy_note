@@ -1,0 +1,11 @@
+<h1><%= @folder.name %></h1>
+<div>
+  <% @memos.each do |memo| %>
+  <div class= "text_dark">
+    <%= link_to memo_path(memo.id) do %>
+      <%= memo.title %>
+    <% end %>
+  </div>
+  <% end %>
+</div>
+

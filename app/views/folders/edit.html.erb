@@ -1,0 +1,22 @@
+<div class="container">
+  <div class = "row col-md-12 justify-content-center my-5 mx-0">
+    <div class = "col-lg-5">
+      <div class="col-md-12 border rounded-lg py-4 px-2 my-1">
+        <div class="text-center py-4">
+          <h3>フォルダ編集</h3>
+        </div>
+        <%= form_with model: @folder, url: folder_path, method: :patch do |f| %>
+          <div class="row col-md-12 mx-0">
+            <div class="col-5"><%= f.label :name,"フォルダ名" %></div>
+            <div class="col-7 px-0"><%= f.text_field :name, class: "col-12 px-1" %></div>
+          </div>
+
+          <div class="row col-12 justify-content-center mx-0">
+            <%= f.submit "変更を保存", class: "col-12 btn btn-block mybtn btn-success text-white tx-tfm rounded-pill mt-4" %>
+            <%= link_to "キャンセル",folders_path, class: "col-12 btn btn-block mybtn btn-light tx-tfm rounded-pill" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
