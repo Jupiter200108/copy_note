@@ -1,8 +1,8 @@
 <div class="container">
   <h3><%= @memo.title %></h3>
   <pre class="bg-dark rounded text-white">
-      <div class="sorcefile"></div>
-      <i class="fas fa-copy ml-auto"></i>
+      <div class="sorcefile"><%= @memo.comment %></div>
+      <i class="fas fa-copy ml-auto"></i><%= @memo.copy_text %>
     <code></code>
   </pre>
 </div>
