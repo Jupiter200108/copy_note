@@ -11,11 +11,7 @@
         </div>
 
         <div class="row col-md-12 mx-0">
-          <div class="col-xl-4">
-            <%= form_with model: memo,url: memos_path,method: :post, local: true do |f| %>
-            <%= render "memos/btn", memo: @memo %>
-            <% end %>
-          </div>
+          <%= render "memos/btn", memo: @memo %>
         </div>
       </div>
     </div>

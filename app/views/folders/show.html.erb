@@ -1,7 +1,7 @@
 <h1><%= @folder.name %></h1>
 <div>
   <% @memos.each do |memo| %>
-    <%= link_to memo_path(memo.id) do %>
+    <%= link_to memo_path(memo.id), data: {"turbolinks" => false} do %>
       <div class= "text-dark"><%= memo.title %></div>
     <% end %>
   <% end %>
