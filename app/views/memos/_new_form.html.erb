@@ -1,0 +1,17 @@
+<%= form_with model: memo, url: memos_path, method: :post do |f| %>
+  <div class="row d-flex border border-3 rounded-lg py-3 px-0 my-2">
+    <div class="col-4 align-top"><%= f.label :folder_id,"フォルダ" %></div>
+    <div class="col-8 align-top"><%= f.select :folder_id, options_from_collection_for_select(Folder.all, :id, :name), {prompt: "選択してください"}, class: "form-control-sm col px-1" %></div>
+
+    <div class="col-4 align-top"><%= f.label :title,"タイトル" %></div>
+    <div class="col-8 align-top"><%= f.text_field :title,placeholder: 'タイトル', class: "col px-1" %></div>
+
+    <div class="col-4 align-top"><%= f.label :comment,"コメント" %></div>
+    <div class="col-8 align-top"><%= f.text_area :comment,placeholder: 'コメント', class: "col px-1" %></div>
+
+    <div class="col-4 align-top"><%= f.label :copy_text,"コピーテキスト" %></div>
+    <div class="col-8 align-top"><%= f.text_area :copy_text,placeholder: 'コピーテキスト', class: "col px-1" %></div>
+
+    <div class="col-12 text-center mt-4 mx-auto"><%= f.submit "新規登録", class: "btn btn-sm btn-outline-success text-center rounded-pill border border-3" %></div>
+  </div>
+<% end %>

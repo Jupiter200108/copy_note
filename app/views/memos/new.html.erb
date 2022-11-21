@@ -7,11 +7,13 @@
     <div class="col-md-10">
       <div class="row">
         <div class="col-12 my-5">
-          <h2>動画・画像新規登録</h2>
+          <h2>新規メモ</h2>
         </div>
 
         <div class="row col-md-12 mx-0">
-          <%= render "memos/btn", memo: @memo %>
+          <div class="col-xl-4">
+            <%= render "memos/new_form", memo: @memo %>
+          </div>
         </div>
       </div>
     </div>

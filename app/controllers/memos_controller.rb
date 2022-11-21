@@ -25,7 +25,7 @@ class MemosController < ApplicationController
   def update
     @memo = Memo.find(params[:id])
     if @memo.update(memo_params)
-      redirect_to memos_path, notice: "You have updated memo successfully."
+      redirect_to memo_path(@memo), notice: "You have updated memo successfully."
     else
       render "edit"
     end
