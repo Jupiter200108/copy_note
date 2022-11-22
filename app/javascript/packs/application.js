@@ -12,6 +12,7 @@ import "jquery";
 import "popper.js";
 import "bootstrap";
 import "../copy.js";
+import "../new_trigger.js";
 import "../stylesheets/application"
 
 

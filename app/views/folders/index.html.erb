@@ -1,24 +1,6 @@
 <div class="container">
   <div class = "row col-md-12 my-5 mx-0 px-0">
 
-    <div class = "col-md-6 col-xl-5">
-      <div class="col-md-12 border rounded-lg py-4 px-2 my-1">
-        <div class="text-center py-4">
-          <h3>フォルダ追加</h3>
-        </div>
-        <%= form_with model: @folder,url: folders_path,method: :post do |f| %>
-          <div class="row col-md-12 mx-0">
-            <div class="col-5 pl-0"><%= f.label :name,"フォルダ名" %></div>
-            <div class="col-7 px-0"><%= f.text_field :name, class: "col-12 px-1" %></div>
-          </div>
-
-          <div class="row col-12 justify-content-center mx-0">
-            <%= f.submit "新規登録", class: "btn btn-block mybtn btn-primary text-white tx-tfm rounded-pill mt-4" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-
     <div class = "col-md-6 col-xl-7">
       <div class = "col-md-12 border border-dark px-0 my-1">
         <div class="col-md-12 bg-secondary text-white text-center py-2">
