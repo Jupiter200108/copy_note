@@ -1,11 +1,12 @@
 class FoldersController < ApplicationController
   def index
     @folder = Folder.new
-    @folders = Folder.all
+    
   end
 
   def show
     @folder = Folder.find(params[:id])
+    @folders = Folder.all
     @memos = Memo.where(folder_id: @folder.id).all
   end
 
