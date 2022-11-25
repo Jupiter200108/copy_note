@@ -1,18 +1,19 @@
 <div class="container">
-  <h1><%= @folder.name %></h1>
-  <div class="col">
-    <% @folders.each do |folder| %>
-      <%= link_to folder_path(folder.id), data: {"turbolinks" => false} do %>
-        <div class= "text-dark"><%= folder.name %></div>
+  <div class="col-9 h1 mx-auto"><%= @folder.name %></div>
+  <div class="row col-9 mx-auto">
+    <div class="col">
+      <% @folders.each do |folder| %>
+        <%= link_to folder_path(folder.id), data: {"turbolinks" => false} do %>
+          <div class= "text-dark"><i class="fa-regular fa-folder-closed mr-1"></i><%= folder.name %></div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-  <div class="col"></div>
-  <div class="col">
-    <% @memos.each do |memo| %>
-      <%= link_to memo_path(memo.id), data: {"turbolinks" => false} do %>
-        <div class= "text-dark"><%= memo.title %></div>
+    </div>
+    <div class="col">
+      <% @memos.each do |memo| %>
+        <%= link_to memo_path(memo.id), data: {"turbolinks" => false} do %>
+          <div class= "text-dark"><i class="fa-regular fa-folder-closed mr-1"></i><%= memo.title %></div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
 </div>

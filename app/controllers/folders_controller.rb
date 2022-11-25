@@ -1,7 +1,7 @@
 class FoldersController < ApplicationController
   def index
     @folder = Folder.new
-    
+    @folders = Folder.all
   end
 
   def show
