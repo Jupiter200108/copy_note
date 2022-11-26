@@ -3,7 +3,7 @@
   <div class="row col-9 mx-auto">
     <div class="col">
       <% @folders.each do |folder| %>
-        <%= link_to folder_path(folder.id), data: {"turbolinks" => false} do %>
+        <%= link_to folder_path(folder.id), data: {"turbolinks" => false}, class: "add-color" do %>
           <div class= "text-dark"><i class="fa-regular fa-folder-closed mr-1"></i><%= folder.name %></div>
         <% end %>
       <% end %>
