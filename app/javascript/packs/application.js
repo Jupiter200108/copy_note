@@ -13,6 +13,7 @@ import "popper.js";
 import "bootstrap";
 import "../copy.js";
 import "../new_trigger.js";
+import "../add_color_link.js";
 import "../stylesheets/application"
 
 

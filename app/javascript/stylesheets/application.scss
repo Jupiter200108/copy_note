@@ -1,5 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  background-color: #000;
+  opacity: 1;
+}
+
+header {
+  background-color: #474747;
+}
+
 .copy_alert {
   display: none;
   color: #fff;
@@ -21,12 +30,14 @@
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
   }
+
   .close-icon-area {
     position: absolute;
     right: 20px;
     top: 20px;
     z-index: 10;
   }
+
   .close-icon,
   .close-icon span {
     display: inline-block;
@@ -48,6 +59,7 @@
     background-color: #000;
     border-radius: 4px;
   }
+
   .close-icon span:nth-child(1) {
     top: 0;
   }
@@ -69,3 +81,9 @@
   }
 }
 
+.add_color_current_link{
+  .current_link_icon{
+    background-color: #1e90ff;
+    text-color: #fff;
+  }
+}
