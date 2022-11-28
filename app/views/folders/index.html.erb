@@ -9,10 +9,10 @@
         <div class="row mx-0 px-0">
         <% @folders.each do |folder| %>
           <div class="row col-md-12 mx-0 py-2 border-bottom align-items-center">
-            <%= link_to folder_path(folder.id), class: "col-6 col-lg-8 px-0 text-dark" do %>
-            <div class="col-12 text-short">
-              <i class="fa-regular fa-folder-closed mr-1"></i><%= folder.name %>
-            </div>
+            <%= link_to folder_path(folder.id), class: "col-6 col-lg-8 px-0 text-dark", data: {"turbolinks" => false} do %>
+              <div class="col-12 text-short">
+                <i class="fa-regular fa-folder-closed mr-1"></i><%= folder.name %>
+              </div>
             <% end %>
             <div class="ml-auto">
               <%= link_to edit_folder_path(folder.id), class: "btn btn-sm btn-outline-success rounded-pill" do %>
