@@ -34,7 +34,7 @@ class MemosController < ApplicationController
   def destroy
     @memo = Memo.find(params[:id])
     @memo.destroy
-    redirect_to memos_path
+    redirect_to folder_path(@memo.folder.id)
   end
 
   private

@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
   var link = $('.folders_link');
   var currentUrl = location.pathname;
   link.each(function() {

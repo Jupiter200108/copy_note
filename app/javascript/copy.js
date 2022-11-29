@@ -1,4 +1,4 @@
-$("turbolinks:load", function(){
+$(document).on('turbolinks:load', function(){
   $('.copy-text-btn').on('click', function(){
     // コピーする文章の取得
     let text = $('.copy_text').text();
