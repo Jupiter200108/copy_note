@@ -5,20 +5,24 @@
       <span></span>
     </div>
   </div>
-  <div class = "form col-md-5 col-xl-3 mx-auto">
-    <div class="col-md-12 border rounded-lg bg-white text-dark py-4 px-2 my-1">
-      <div class="text-center py-4">
-        <h3>フォルダ追加</h3>
-      </div>
-      <%= form_with model: folder,url: folders_path,method: :post do |f| %>
-        <div class="row col-md-12 mx-0">
-          <div class="col-5 pl-0"><%= f.label :name,"フォルダ名" %></div>
-          <div class="col-7 px-0"><%= f.text_field :name, class: "col-12 px-1" %></div>
-        </div>
+  <div class = "container py-5 my-5">
+    <div class="row col-md-6 col-lg-5 col-xl-4 border border-2 rounded-lg bg-white text-dark my-5 mx-auto py-5">
+      <div class="col-md-12 mx-auto">
+        <div class="logo mb-4">
+  			  <div class="col-md-12 text-center">
+  				 <h2>新規フォルダ</h2>
+  			  </div>
+  			</div>
+        <%= form_with model: folder,url: folders_path,method: :post do |f| %>
+          <div class="row col-md-12 mx-0">
+            <div class="col-5 pl-0"><%= f.label :name,"フォルダ名" %></div>
+            <div class="col-7 px-0"><%= f.text_field :name, class: "col-12 px-1" %></div>
+          </div>
 
-        <%= f.submit "新規登録", class: "btn btn-block mybtn btn-primary col text-white tx-tfm rounded-pill mt-4" %>
-        <div class="closed-form-btn btn btn-block mybtn btn-secondary col text-white tx-tfm rounded-pill mb-4">キャンセル</div>
-      <% end %>
+          <%= f.submit "新規登録", class: "btn btn-block mybtn btn-primary col text-white tx-tfm rounded-pill mt-5" %>
+          <div class="closed-form-btn btn btn-block mybtn btn-outline-secondary col tx-tfm rounded-pill">キャンセル</div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

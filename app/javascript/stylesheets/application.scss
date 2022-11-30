@@ -48,12 +48,6 @@ header {
   min-height: 100%;
   display: none;
   z-index: 9;
-  .form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-  }
 
   .close-icon-area {
     position: absolute;

@@ -1,20 +1,22 @@
 <div class="container">
-  <h3 class="text-wrap text-break text-white"><%= @memo.title %></h3>
+  <div class="row col-8 mx-auto">
+    <h3 class="col-12 text-wrap text-break text-white"><%= @memo.title %></h3>
 
-  <div class="d-flex justify-content-between bg-dark text-white p-3">
-    <div>
-      <span class="text-secondary text-wrap text-break">// <%= @memo.comment %></span><br>
-      <span class="copy_text text-wrap text-break"><%= @memo.copy_text %></span>
-    </div>
-    <div class="d-flex justify-content-between mb-auto">
-        <div class="btn btn-sm btn-outline-light rounded-pill mx-2 copy-text-btn"><i class="fa-solid fa-copy"></i></div>
-        <span id="js-copyalert" class="copy_alert my-auto">コピー完了！</span>
-      <%= link_to edit_memo_path(@memo.id), class: "btn btn-sm btn-outline-success rounded-pill mr-2" do %>
-        <i class="fa-solid fa-pen-to-square"></i>
-      <% end %>
-      <%= link_to memo_path(@memo.id), method: :delete, class: "btn btn-sm btn-outline-danger rounded-pill mr-2 destroy_book_#{@memo.id}" do %>
-        <i class="fa-regular fa-trash-can"></i>
-      <% end %>
+    <div class="col-12 d-flex justify-content-between bg-dark text-white p-3">
+      <div>
+        <span class="text-secondary text-wrap text-break">// <%= @memo.comment %></span><br>
+        <span class="copy_text text-wrap text-break"><%= @memo.copy_text %></span>
+      </div>
+      <div class="d-flex justify-content-between mb-auto">
+          <div class="btn btn-sm btn-outline-light rounded-pill mx-2 copy-text-btn"><i class="fa-solid fa-copy"></i></div>
+          <span id="js-copyalert" class="copy_alert my-auto">コピー完了！</span>
+        <%= link_to edit_memo_path(@memo.id), class: "btn btn-sm btn-outline-success rounded-pill mr-2" do %>
+          <i class="fa-solid fa-pen-to-square"></i>
+        <% end %>
+        <%= link_to memo_path(@memo.id), method: :delete, class: "btn btn-sm btn-outline-danger rounded-pill mr-2 destroy_book_#{@memo.id}" do %>
+          <i class="fa-regular fa-trash-can"></i>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
