@@ -111,3 +111,13 @@ header {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.word-break {
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+.pre-wrap {
+  white-space: pre-wrap;
+}
+
