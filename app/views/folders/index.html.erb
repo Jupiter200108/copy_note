@@ -1,18 +1,14 @@
-<div class="container">
-  <div class = "row col-md-12 my-5 mx-0 px-0">
-
-    <div class = "col-md-6 col-xl-7">
-      <div class = "col-md-12 border border-dark px-0 my-1">
-        <div class="col-md-12 bg-secondary text-white text-center py-2">
-          フォルダ
-        </div>
-        <div class="row mx-0 px-0">
-        <% @folders.each do |folder| %>
-          <div class="row col-md-12 mx-0 py-2 border-bottom align-items-center">
-            <%= link_to folder_path(folder.id), class: "col-6 col-lg-8 px-0 text-dark", data: {"turbolinks" => false} do %>
-              <div class="col-12 text-short">
-                <i class="fa-regular fa-folder-closed mr-1"></i><%= folder.name %>
-              </div>
+<div class="container h-100">
+  <div class="row col-md-8 justify-content-between h1 mx-auto text-white my-3">
+    <フォルダ一覧>
+  </div>
+  <div class="row h-100 mx-auto">
+    <div class="col-2 border-left px-0"></div>
+    <div class="col-8 border-right border-left py-3 px-0">
+      <% @folders.each do |folder| %>
+        <div class="row col-md-12 mx-0 py-2 border-top border-bottom align-items-center">
+            <%= link_to folder_path(folder.id), data: {"turbolinks" => false}, class: "folders_link" do %>
+              <div class= "col text-white current_link_icon rounded"><i class="fa-regular fa-folder-closed mr-2"></i><%= folder.name %></div>
             <% end %>
             <div class="ml-auto">
               <%= link_to edit_folder_path(folder.id), class: "btn btn-sm btn-outline-success rounded-pill" do %>
@@ -24,10 +20,8 @@
               <% end %>
             </div>
           </div>
-        <% end %>
-        </div>
-      </div>
+      <% end %>
     </div>
-
+    <div class="col-2 border-right px-0"></div>
   </div>
 </div>
