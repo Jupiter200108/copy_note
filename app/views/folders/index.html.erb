@@ -1,25 +1,25 @@
 <div class="container h-100">
-  <div class="row col-md-8 justify-content-between h1 mx-auto text-white my-3">
-    <フォルダ一覧>
+  <div class="row col-md-8 h2 justify-content-between h1 mx-auto text-white my-3">
+    ＜フォルダ一覧＞
   </div>
   <div class="row h-100 mx-auto">
     <div class="col-2 border-left px-0"></div>
     <div class="col-8 border-right border-left py-3 px-0">
       <% @folders.each do |folder| %>
-        <div class="row col-md-12 mx-0 py-2 border-top border-bottom align-items-center">
-            <%= link_to folder_path(folder.id), data: {"turbolinks" => false}, class: "folders_link" do %>
-              <div class= "col text-white current_link_icon rounded"><i class="fa-regular fa-folder-closed mr-2"></i><%= folder.name %></div>
+        <div class="row col-md-12 border-top border-bottom align-items-center mx-0">
+          <%= link_to folder_path(folder.id), data: {"turbolinks" => false}, class: "folders_link flex-grow-1 py-2" do %>
+            <div class= "col text-white rounded current_link_icon"><i class="fa-regular fa-folder-closed mr-2"></i><%= folder.name %></div>
+          <% end %>
+          <div>
+            <%= link_to edit_folder_path(folder.id), class: "btn btn-sm btn-outline-success rounded-pill" do %>
+              <i class="fa-solid fa-pen-to-square"></i>
             <% end %>
-            <div class="ml-auto">
-              <%= link_to edit_folder_path(folder.id), class: "btn btn-sm btn-outline-success rounded-pill" do %>
-                <i class="fa-solid fa-pen-to-square"></i>
-              <% end %>
 
-              <%= link_to folder_path(folder.id), method: :delete, class: "btn btn-sm btn-outline-danger rounded-pill destroy_book_#{folder.id}" do %>
-                <i class="fa-regular fa-trash-can"></i>
-              <% end %>
-            </div>
+            <%= link_to folder_path(folder.id), method: :delete, class: "btn btn-sm btn-outline-danger rounded-pill destroy_book_#{folder.id}" do %>
+              <i class="fa-regular fa-trash-can"></i>
+            <% end %>
           </div>
+        </div>
       <% end %>
     </div>
     <div class="col-2 border-right px-0"></div>
