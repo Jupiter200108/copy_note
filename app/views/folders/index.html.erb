@@ -7,7 +7,7 @@
     <div class="col-8 border-right border-left py-3 px-0">
       <% @folders.each do |folder| %>
         <div class="row col-md-12 border-top border-bottom align-items-center mx-0">
-          <%= link_to folder_path(folder.id), data: {"turbolinks" => false}, class: "folders_link flex-grow-1 py-2" do %>
+          <%= link_to folder_path(folder.id), data: {"turbolinks" => false}, class: "folders_link text-decoration-none flex-grow-1 py-2" do %>
             <div class= "col text-white rounded current_link_icon"><i class="fa-regular fa-folder-closed mr-2"></i><%= folder.name %></div>
           <% end %>
           <div>
