@@ -6,19 +6,18 @@
     <div class="col-2 border-left px-0"></div>
     <div class="col-8 border-right border-left py-3 px-0">
       <% @folders.each do |folder| %>
-        <div class="row col-md-12 border-top border-bottom align-items-center mx-0">
+        <div class="row col-md-12 border-top align-items-center mx-0 my-1">
           <%= link_to folder_path(folder.id), data: {"turbolinks" => false}, class: "folders_link text-decoration-none flex-grow-1 py-2" do %>
             <div class= "col text-white rounded current_link_icon"><i class="fa-regular fa-folder-closed mr-2"></i><%= folder.name %></div>
           <% end %>
-          <div>
-            <%= link_to edit_folder_path(folder.id), class: "btn btn-sm btn-outline-success rounded-pill" do %>
-              <i class="fa-solid fa-pen-to-square"></i>
-            <% end %>
 
-            <%= link_to folder_path(folder.id), method: :delete, class: "btn btn-sm btn-outline-danger rounded-pill destroy_book_#{folder.id}" do %>
-              <i class="fa-regular fa-trash-can"></i>
-            <% end %>
-          </div>
+          <%= link_to edit_folder_path(folder.id), class: "btn btn-sm btn-outline-success rounded-pill mr-1" do %>
+            <i class="fa-solid fa-pen-to-square"></i>
+          <% end %>
+
+          <%= link_to folder_path(folder.id), method: :delete, class: "btn btn-sm btn-outline-danger rounded-pill destroy_book_#{folder.id}" do %>
+            <i class="fa-regular fa-trash-can"></i>
+          <% end %>
         </div>
       <% end %>
     </div>
