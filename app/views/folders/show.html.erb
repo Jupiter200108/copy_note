@@ -1,14 +1,16 @@
 <div class="container h-100">
-  <div class="row col-md-8 justify-content-between h1 mx-auto text-white">
-    < <%= @folder.name %> >
-    <div>
-      <%= link_to edit_folder_path(@folder.id), class: "btn btn-sm btn-outline-success rounded-pill" do %>
-        <i class="fa-solid fa-pen-to-square"></i>
-      <% end %>
+  <div class="col-12 bg-BL text-white mt-2">
+    <div class="row col-md-8 justify-content-between h1 mx-auto my-0 py-2">
+      < <%= @folder.name %> >
+      <div>
+        <%= link_to edit_folder_path(@folder.id), class: "btn btn-sm btn-outline-success rounded-pill" do %>
+          <i class="fa-solid fa-pen-to-square"></i>
+        <% end %>
 
-      <%= link_to folder_path(@folder.id), method: :delete, class: "btn btn-sm btn-outline-danger rounded-pill destroy_book_#{@folder.id}" do %>
-        <i class="fa-regular fa-trash-can"></i>
-      <% end %>
+        <%= link_to folder_path(@folder.id), method: :delete, class: "btn btn-sm btn-outline-danger rounded-pill destroy_book_#{@folder.id}" do %>
+          <i class="fa-regular fa-trash-can"></i>
+        <% end %>
+      </div>
     </div>
   </div>
   <div class="row h-100 mx-auto">
