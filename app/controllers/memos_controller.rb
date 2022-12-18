@@ -17,8 +17,7 @@ class MemosController < ApplicationController
     if @memo.save
       redirect_to memo_path(@memo), notice: "You have created memo successfully."
     else
-      @memos = Memo.all
-      render 'index'
+      redirect_to folders_path
     end
   end
 
