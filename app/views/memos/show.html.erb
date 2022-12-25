@@ -1,26 +1,21 @@
 <div class="container h-100">
-  <div class="row col-8 h-100 mx-auto align-content-start bg-white mt-3">
+  <div class="row col-xl-8 h-100 mx-auto align-content-start bg-white mt-3">
     <div class="h2 col-12 my-2">< <%= @memo.folder.name %> ></div>
     <div class="h3 col-12 text-wrap text-break"><%= @memo.title %></div>
-
-    <div class="col-12 d-flex justify-content-between bg-dark text-white p-3">
-      <div>
+    <div class="col-12 bg-dark text-white p-3">
+      <div class="d-flex justify-content-end align-items-start">
+        <span id="js-copyalert" class="copy_alert">コピー完了！</span>
+        <div class="btn btn-sm btn-outline-light rounded-pill mx-2 copy-text-btn"><i class="fa-solid fa-copy"></i></div>
+        <%= link_to edit_memo_path(@memo.id), class: "btn btn-sm btn-outline-success rounded-pill mr-2" do %>
+          <i class="fa-solid fa-pen-to-square"></i>
+        <% end %>
+        <%= link_to memo_path(@memo.id), method: :delete, class: "btn btn-sm btn-outline-danger rounded-pill mr-2 destroy_book_#{@memo.id}" do %>
+          <i class="fa-regular fa-trash-can"></i>
+        <% end %>
+      </div>
+      <div class="col-12 px-0">
         <span class="text-secondary word-break pre-wrap">// <%= @memo.comment %></span><br>
         <span class="copy_text word-break pre-wrap"><%= @memo.copy_text %></span>
-      </div>
-      <div>
-        <div class="d-flex justify-content-between align-items-start">
-          <div class="btn btn-sm btn-outline-light rounded-pill mx-2 copy-text-btn"><i class="fa-solid fa-copy"></i></div>
-          <%= link_to edit_memo_path(@memo.id), class: "btn btn-sm btn-outline-success rounded-pill mr-2" do %>
-            <i class="fa-solid fa-pen-to-square"></i>
-          <% end %>
-          <%= link_to memo_path(@memo.id), method: :delete, class: "btn btn-sm btn-outline-danger rounded-pill mr-2 destroy_book_#{@memo.id}" do %>
-            <i class="fa-regular fa-trash-can"></i>
-          <% end %>
-        </div>
-        <div class="d-flex justify-content-center mt-3">
-          <span id="js-copyalert" class="copy_alert">コピー完了！</span>
-        </div>
       </div>
     </div>
   </div>
