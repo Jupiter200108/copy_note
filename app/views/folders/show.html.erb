@@ -1,17 +1,29 @@
 <div class="container h-100">
-  <div class="col-12 bg-BL border text-white mt-3">
-    <div class="row col-md-8 justify-content-between h1 mx-auto my-0 py-3">
-      < <%= @folder.name %> >
-      <div>
-        <%= link_to edit_folder_path(@folder.id), class: "btn btn-sm btn-outline-success rounded-pill" do %>
+  <div class="col-12 bg-BL border text-white mt-3 px-0">
+    <div class="row col-md-8 justify-content-between h1 mx-auto my-0 py-3 px-0">
+      ＜ <%= @folder.name %> ＞
+      <div class="d-flex align-items-center">
+        <%= link_to edit_folder_path(@folder.id), class: "btn btn-sm btn-outline-success rounded-pill mr-1" do %>
           <i class="fa-solid fa-pen-to-square"></i>
         <% end %>
 
-        <%= link_to folder_path(@folder.id), method: :delete, class: "btn btn-sm btn-outline-danger rounded-pill destroy_book_#{@folder.id}" do %>
+        <%= link_to folder_path(@folder.id), method: :delete, class: "btn btn-sm btn-outline-danger rounded-pill destroy_book_#{@folder.id} mr-1" do %>
           <i class="fa-regular fa-trash-can"></i>
         <% end %>
+        <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-sm border border-white rounded-circle text-white my-auto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="py-auto"><i class="fa-solid fa-plus h6 my-auto"></i></div>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <a class="dropdown-item new-form-trigger text-decoration-none" href="#">
+            <i class="fa-solid fa-folder-open mr-1"></i><span>新規フォルダ</span>
+            </a>
+            <%= link_to new_memo_path,class: "dropdown-item text-decoration-none" do %>
+              <i class="fa-solid fa-file-pen mr-1"></i></i><span>新規メモ</span>
+            <% end %>
+          </div>
+        </div>
       </div>
-      <i class="fa-solid fa-circle-plus"></i>
     </div>
   </div>
   <div class="row h-100 mx-auto">

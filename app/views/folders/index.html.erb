@@ -1,8 +1,20 @@
 <div class="container h-100">
-  <div class="col-12 bg-BL border text-white mt-3">
-    <div class="row col-md-8 justify-content-between h2 mx-auto my-3">
+  <div class="col-12 bg-BL border text-white mt-3 px-0">
+    <div class="row col-md-8 justify-content-between h1 mx-auto my-0 py-3 px-0">
       <div>＜フォルダ一覧＞</div>
-      <div><i class="fa-solid fa-circle-plus"></i></div>
+      <div class="btn-group pr-1" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-sm border border-white rounded-circle text-white my-auto" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="py-auto"><i class="fa-solid fa-plus h6 my-auto"></i></div>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a class="dropdown-item new-form-trigger text-decoration-none" href="#">
+          <i class="fa-solid fa-folder-open mr-1"></i><span>新規フォルダ</span>
+          </a>
+          <%= link_to new_memo_path,class: "dropdown-item text-decoration-none" do %>
+            <i class="fa-solid fa-file-pen mr-1"></i></i><span>新規メモ</span>
+          <% end %>
+        </div>
+      </div>
     </div>
 
   </div>
