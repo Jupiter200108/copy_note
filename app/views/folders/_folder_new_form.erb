@@ -16,7 +16,7 @@
         <%= form_with model: folder,url: folders_path,method: :post do |f| %>
           <div class="row col-md-12 mx-0">
             <div class="col-5 pl-0"><%= f.label :name,"フォルダ名" %></div>
-            <div class="col-7 px-0"><%= f.text_field :name, class: "col-12 px-1" %></div>
+            <div class="col-7 px-0"><%= f.text_field :name, class: "col-12 px-1", value: "" %></div>
           </div>
 
           <%= f.submit "新規登録", class: "btn btn-block mybtn btn-primary col text-white tx-tfm rounded-pill mt-5" %>

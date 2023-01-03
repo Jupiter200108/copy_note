@@ -31,7 +31,11 @@
     <div class="col-4 border-right border-bottom px-0">
       <% @folders.each do |folder| %>
         <%= link_to folder_path(folder.id), data: {"turbolinks" => false}, class: "folders_link text-decoration-none" do %>
-          <div class= "col text-white current_link_icon rounded"><i class="fa-regular fa-folder-closed mr-2"></i><%= folder.name %></div>
+          <div class= "col d-flex text-white current_link_icon rounded">
+            <div><i class="fa-regular fa-folder-closed mr-2"></i></div>
+            <div><%= folder.name %></div>
+            <div class="ml-auto">[<%= folder.memos.count %>]</div>
+          </div>
         <% end %>
       <% end %>
     </div>
